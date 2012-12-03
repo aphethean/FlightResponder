@@ -1,11 +1,15 @@
 events
 	GET GET
+	DELETE DELETE
+	PUT PUT
 end
 
 commands
 	GETServiceDocument
 	GETEntities
 	GETEntity
+	DeleteEntity
+	UpdateEntity
 	GETNavPropertyflightSchedules entity=Airport, navproperty=navflightSchedules
 	GETNavPropertydepartureAirport entity=FlightSchedule, navproperty=navdepartureAirport
 	GETNavPropertyarrivalAirport entity=FlightSchedule, navproperty=navarrivalAirport
@@ -51,6 +55,7 @@ resource flights
 	view { GETEntities }
 	path "/Flight"
 	GET *-> flight id=flightID
+	DELETE *-> flightDeleted
 end
 
 
@@ -58,6 +63,25 @@ resource flight
 	item Flight
 	view { GETEntity }
 	path "/Flight({id})"
+	DELETE -> flightDeleted
+	PUT -> flightUpdated
+end
+
+resource flightDeleted
+    item Flight
+    view { GETEntity }
+    actions { DeleteEntity }
+    relations { "edit" }
+    path "/Flight({id})"
+    GET --> flights
+end
+
+resource flightUpdated
+    item Flight
+    view { GETEntity }
+    actions { UpdateEntity }
+    relations { "edit" }
+    path "/Flight({id})"
 end
 
 

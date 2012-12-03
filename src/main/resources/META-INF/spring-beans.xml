@@ -129,7 +129,7 @@
 		<constructor-arg ref="producer" />
 	</bean>
 	
-	<bean id="POSTEntity" class="com.temenos.interaction.commands.odata.CreateEntityCommand">
+	<bean id="UpdateEntity" class="com.temenos.interaction.commands.odata.CreateEntityCommand">
 		<constructor-arg ref="producer" />
 	</bean>
 	
@@ -163,7 +163,7 @@
 				<entry key="GETEntity" value-ref="GETEntity" />
 				<entry key="GETEntities" value-ref="GETEntities" />
 				<entry key="GETNavProperty" value-ref="GETNavProperty" />
-				<entry key="POSTEntity" value-ref="POSTEntity" />
+				<entry key="UpdateEntity" value-ref="UpdateEntity" />
 				<entry key="CreateEntity" value-ref="CreateEntity" />
 				<entry key="DeleteEntity" value-ref="DeleteEntity" />
 				<entry key="GETNavPropertyflightSchedules" value-ref="GETNavPropertyflightSchedules" />
