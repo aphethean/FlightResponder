@@ -1,0 +1,97 @@
+events
+	GET GET
+end
+
+commands
+	GETServiceDocument
+	GETEntities
+	GETEntity
+	GETNavPropertyflightSchedules entity=Airport, navproperty=navflightSchedules
+	GETNavPropertydepartureAirport entity=FlightSchedule, navproperty=navdepartureAirport
+	GETNavPropertyarrivalAirport entity=FlightSchedule, navproperty=navarrivalAirport
+end
+
+initial resource ServiceDocument
+	collection ServiceDocument
+	view { GETServiceDocument }
+	path "/"
+	GET -> airports
+	GET -> flights
+	GET -> flightschedules
+end
+
+
+resource airports
+	collection Airport
+	view { GETEntities }
+	path "/Airport"
+	GET *-> airport id=code
+	GET *-> flightSchedules id=code
+end
+
+
+resource airport
+	item Airport
+	view { GETEntity }
+	path "/Airport('{id}')"
+	GET -> flightSchedules id=code, navflightSchedules="flightSchedules"
+end
+
+
+
+resource flightSchedules
+	collection FlightSchedule
+	view { GETNavPropertyflightSchedules }
+	path "/Airport('{id}')/{navflightSchedules}"
+	GET -> flightschedules id=flightScheduleID
+end
+
+resource flights
+	collection Flight
+	view { GETEntities }
+	path "/Flight"
+	GET *-> flight id=flightID
+end
+
+
+resource flight
+	item Flight
+	view { GETEntity }
+	path "/Flight({id})"
+end
+
+
+
+resource flightschedules
+	collection FlightSchedule
+	view { GETEntities }
+	path "/FlightSchedule"
+	GET *-> flightschedule id=flightScheduleID
+	GET *-> departureAirport id=flightScheduleID
+	GET *-> arrivalAirport id=flightScheduleID
+end
+
+
+resource flightschedule
+	item FlightSchedule
+	view { GETEntity }
+	path "/FlightSchedule({id})"
+	GET -> departureAirport id=flightScheduleID, navdepartureAirport="departureAirport"
+	GET -> arrivalAirport id=flightScheduleID, navarrivalAirport="arrivalAirport"
+end
+
+
+
+resource departureAirport
+	item Airport
+	view { GETNavPropertydepartureAirport }
+	path "/FlightSchedule({id})/{navdepartureAirport}"
+	GET -> flightSchedules id=code
+end
+
+resource arrivalAirport
+	item Airport
+	view { GETNavPropertyarrivalAirport }
+	path "/FlightSchedule({id})/{navarrivalAirport}"
+	GET -> flightSchedules id=code
+end
