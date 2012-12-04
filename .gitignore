@@ -1,3 +1,4 @@
 
 /target
 /src/main/java/FlightResponderModel/FlightResponderBehaviour.java
+/src-gen/FlightResponderModel/FlightResponderBehaviour.java
