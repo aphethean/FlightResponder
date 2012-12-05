@@ -1,7 +1,7 @@
 FlightResponder
 ===============
 
-Default generated mockresponder with 'edit' link relations
+Default generated mockresponder with 'edit' link relations.
 
 ## Deploy to CloudBees
 
