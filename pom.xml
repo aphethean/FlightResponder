@@ -65,7 +65,7 @@
         <version>1.3.2</version>
         <configuration>
           <!-- Configure the webapp -->
-          <warSourceDirectory>${project.build.directory}/${artifactId}-${version}</warSourceDirectory>
+          <warSourceDirectory>${project.build.directory}/${project.artifactId}-${project.version}</warSourceDirectory>
         </configuration>
       </plugin>
 
