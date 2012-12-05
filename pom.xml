@@ -125,6 +125,10 @@
 			-->
 		  <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
 		</repository>
+		<repository>
+			<id>cloudbees-aphethean-snapshot-repository</id>
+			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -132,6 +136,10 @@
 			<url>http://repository-cloudbees.forge.cloudbees.com/public-release</url>
 			<releases><enabled>true</enabled></releases> 
 			<snapshots><enabled>false</enabled></snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>cloudbees-aphethean-snapshot-plugin-repository</id>
+			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
 		</pluginRepository>
 	</pluginRepositories>
 
