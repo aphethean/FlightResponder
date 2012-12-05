@@ -1,0 +1,18 @@
+{
+    "id": "iris_crud_template",
+    "name": "IRIS MockResponder CRUD project",
+    "source": "git://github.com/aphethean/FlightResponder.git",
+    "description" : "IRIS is an interaction framework that enables you to quickly and easily define RESTful interaction services.",
+    "icon" : "http://aphethean.github.com/IRIS/images/iris-logo.png",
+    "doc-url" : "https://github.com/aphethean/FlightResponder/blob/master/README.md",
+    "runtime": {
+        "type": "tomcat"
+    },
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven",
+            "options": {
+            }            
+        }
+    }
+}
