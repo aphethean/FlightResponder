@@ -69,7 +69,6 @@ end
 
 resource flightDeleted
     item Flight
-    view { GETEntity }
     actions { DeleteEntity }
     relations { "edit" }
     path "/Flight({id})"
@@ -78,7 +77,6 @@ end
 
 resource flightUpdated
     item Flight
-    view { GETEntity }
     actions { UpdateEntity }
     relations { "edit" }
     path "/Flight({id})"
