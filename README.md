@@ -11,7 +11,7 @@ Clickstart is an awesome way to clone this project, setup an automated build, an
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/aphethean/FlightResponder/master/clickstart.json"><img src="https://s3.amazonaws.com/cloudbees-downloads/clickstart/clickstart-now.png"/></a>
 
 
-## Deploy an existing project manually to CloudBees
+## You can also deploy existing projects to CloudBees
 
 http://developer.cloudbees.com/bin/view/RUN/DevToRun
 `
