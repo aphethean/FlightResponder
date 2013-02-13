@@ -147,7 +147,7 @@
 			<id>cloudbees-aphethean-snapshot-plugin-repository</id>
 			<name>CloudBees Maven Repository</name>
 			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
-			<releases><enabled>false</enabled></releases> 
+			<releases><enabled>true</enabled></releases> 
 			<snapshots><enabled>true</enabled></snapshots>
 		</pluginRepository>
 	</pluginRepositories>
