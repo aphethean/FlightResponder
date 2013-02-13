@@ -132,7 +132,7 @@
 		<repository>
 			<id>cloudbees-private-snapshot-repository</id>
 			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
-			<releases><enabled>true</enabled></releases> 
+			<releases><enabled>false</enabled></releases> 
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
 	</repositories>
@@ -140,12 +140,14 @@
 		<pluginRepository>
 			<id>cloudbees-public-release</id>
 			<url>http://repository-cloudbees.forge.cloudbees.com/public-release</url>
+			<releases><enabled>true</enabled></releases> 
+			<snapshots><enabled>false</enabled></snapshots>
 		</pluginRepository>
 		<pluginRepository>
 			<id>cloudbees-private-snapshot-plugin-repository</id>
 			<name>CloudBees Maven Repository</name>
 			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
-			<releases><enabled>true</enabled></releases> 
+			<releases><enabled>false</enabled></releases> 
 			<snapshots><enabled>true</enabled></snapshots>
 		</pluginRepository>
 	</pluginRepositories>
