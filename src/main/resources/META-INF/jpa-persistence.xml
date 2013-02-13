@@ -9,6 +9,7 @@
 		<class>FlightResponderModel.Airport</class>
 		<class>FlightResponderModel.Flight</class>
 		<class>FlightResponderModel.FlightSchedule</class>
+		<class>FlightResponderModel.Passenger</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 	</persistence-unit>
 

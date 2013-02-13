@@ -5,10 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import java.util.Collection;
 
 @Entity
 public class FlightSchedule {
@@ -35,6 +38,9 @@ public class FlightSchedule {
 	@JoinColumn(name = "arrivalAirportCode", referencedColumnName = "code", insertable = false, updatable = false)
 	@ManyToOne(optional = false)
 	private Airport arrivalAirport;
+
+    @OneToMany(mappedBy="flightScheduleNum")
+    private Collection<Flight> flights;
 
 	public FlightSchedule() {
 	}

@@ -14,20 +14,22 @@ import javax.persistence.ManyToOne;
 import java.util.Collection;
 
 @Entity
-public class Airport {
+public class Passenger {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Basic(optional = false)
-	private String code;
+	private Long passengerNo;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	private java.util.Date dateOfBirth;
+	private Long flightID;
 	private String name;
-	private String country;
+	@JoinColumn(name = "flightID", referencedColumnName = "flightID", insertable = false, updatable = false)
+	@ManyToOne(optional = false)
+	private Flight flight;
 
-    @OneToMany(mappedBy="departureAirportCode")
-    private Collection<FlightSchedule> departures;
-    @OneToMany(mappedBy="arrivalAirportCode")
-    private Collection<FlightSchedule> arrivals;
 
-	public Airport() {
+	public Passenger() {
 	}
 }

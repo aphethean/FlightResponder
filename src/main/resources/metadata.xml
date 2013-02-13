@@ -17,6 +17,10 @@
 			<Term Name="TERM_VALUE_TYPE">INTEGER_NUMBER</Term>
 			<Term Name="TERM_ID_FIELD">true</Term>
 		</Property>
+		<Property Name="flightScheduleNum">
+			<Term Name="TERM_MANDATORY">true</Term>
+			<Term Name="TERM_VALUE_TYPE">INTEGER_NUMBER</Term>
+		</Property>
 		<Property Name="takeoffTime">
 			<Term Name="TERM_VALUE_TYPE">TIMESTAMP</Term>
 		</Property>
@@ -42,5 +46,21 @@
 		<Property Name="lastDeparture">
 			<Term Name="TERM_VALUE_TYPE">TIMESTAMP</Term>
 		</Property>
+	</Entity>
+	<Entity Name="Passenger">
+		<Property Name="dateOfBirth">
+			<Term Name="TERM_MANDATORY">true</Term>
+			<Term Name="TERM_VALUE_TYPE">TIMESTAMP</Term>
+		</Property>
+		<Property Name="passengerNo">
+			<Term Name="TERM_MANDATORY">true</Term>
+			<Term Name="TERM_VALUE_TYPE">INTEGER_NUMBER</Term>
+			<Term Name="TERM_ID_FIELD">true</Term>
+		</Property>
+		<Property Name="flightID">
+			<Term Name="TERM_MANDATORY">true</Term>
+			<Term Name="TERM_VALUE_TYPE">INTEGER_NUMBER</Term>
+		</Property>
+		<Property Name="name" />
 	</Entity>
 </Metadata>
