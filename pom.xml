@@ -130,7 +130,7 @@
 		  <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
 		</repository>
 		<repository>
-			<id>cloudbees-private-snapshot-repository</id>
+			<id>cloudbees-aphethean-snapshot-repository</id>
 			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
 			<releases><enabled>false</enabled></releases> 
 			<snapshots><enabled>true</enabled></snapshots>
@@ -144,7 +144,7 @@
 			<snapshots><enabled>false</enabled></snapshots>
 		</pluginRepository>
 		<pluginRepository>
-			<id>cloudbees-private-snapshot-plugin-repository</id>
+			<id>cloudbees-aphethean-snapshot-plugin-repository</id>
 			<name>CloudBees Maven Repository</name>
 			<url>https://repository-aphethean.forge.cloudbees.com/snapshot/</url>
 			<releases><enabled>false</enabled></releases> 
