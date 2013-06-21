@@ -208,6 +208,14 @@
     	<version>1.2.0-incubating</version>
     </dependency>
 
+    <!-- Resource representations -->
+    <dependency>
+        <groupId>com.temenos.interaction</groupId>
+        <artifactId>interaction-media-xhtml</artifactId>
+    	<version>0.3.0-SNAPSHOT</version>
+        <scope>runtime</scope>
+    </dependency>
+	
     <!-- The dependency for JPA (note - this comes from the eclipse repository as Sun licensed this jar??) -->
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
