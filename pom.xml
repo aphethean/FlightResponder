@@ -183,6 +183,13 @@
     	<scope>runtime</scope>
     </dependency>
     <dependency>
+        <groupId>com.temenos.interaction</groupId>
+        <artifactId>interaction-odata4j-ext</artifactId>
+        <version>0.3.0</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
     	<groupId>com.temenos.interaction</groupId>
     	<artifactId>interaction-commands-odata</artifactId>
     	<version>0.3.0</version>
@@ -216,7 +223,13 @@
     	<version>0.3.0</version>
         <scope>runtime</scope>
     </dependency>
-	
+    <dependency>
+        <groupId>com.temenos.interaction</groupId>
+        <artifactId>interaction-media-odata-xml</artifactId>
+    	<version>0.3.0</version>
+        <scope>runtime</scope>
+    </dependency>
+
     <!-- The dependency for JPA (note - this comes from the eclipse repository as Sun licensed this jar??) -->
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
